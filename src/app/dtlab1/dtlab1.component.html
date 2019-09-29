@@ -1,0 +1,47 @@
+<div class="container"style="padding-top:20px">
+    
+    <div class="card">
+        <div class="card-header">
+          Leaf Rake
+        </div>
+        <div class="card mb-3 mt-5 text-primary border-primary mx-md-5">
+            <div class="row no-gutters text-monospace">		
+                <div class="col-md-7">
+                    <div class="card-body">	
+                        <div class="row"  >
+                                    <img  src="assets/imagesweb1/{{product.imageUrl}}" width="200">
+                                </div>
+                        <div class="row">
+                            <p class="card-text col-md-4 col-6">Name:</p>
+                            <p class="font-weight-bold">{{product.productName}}</p>
+                        </div>
+                        <div class="row">
+                            <p class="card-text col-md-4 col-6">code:</p>
+                            <p class="font-weight-bold">{{product.productCode}}</p>
+                        </div>
+                        <div class="row">
+                            <p class="card-text col-md-4 col-6">Description:</p>
+                            <p class="font-weight-bold">{{product.description}}</p>
+
+                      </div>			
+                        <div class="row">
+                            <p class="card-text col-md-4 col-6">Availability:</p>
+                            <p class="font-weight-bold">{{product.releaseDate}}</p>
+                        </div>
+                        <div class="row">
+                            <p class="card-text col-md-4 col-6">prince:</p>
+                            <p class="font-weight-bold">{{product.price}}</p>
+                        </div>			
+                        <div class="row">
+                            <p class="card-text col-md-4 col-6">5 Star Rating:</p>
+                            <p class="font-weight-bold">{{product.starRating}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div class="card-footer col-md-12">
+			<i class="fas fa-arrow-circle-left fa-lg ml-1"(click)='Back()'>&nbsp;Back</i>
+		</div>	
+      </div>
+</div>

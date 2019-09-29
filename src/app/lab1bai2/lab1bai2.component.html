@@ -1,0 +1,66 @@
+<div class="card-header">
+    <ul class="nav nav-pills card-header-pills">
+        <li class="nav-item">
+            <a class="nav-link " [routerLink]="['/trangchu']">Trang chủ</a>
+          </li>
+      <li class="nav-item">
+        <a class="nav-link " [routerLink]="['/lab1']">phụ lục demo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"[routerLink]="['/lab1bai1']">bài 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " [routerLink]="['/lab1bai2']" >bài 2</a>
+      </li>
+    </ul>
+  </div>
+      <div class="card-body">
+            <div class="col-2" style="float: left" >
+              <h3>Your Cart</h3>
+            </div>
+            <table class="table table-bordered">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">image</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Quatity</th>
+                  <th scope="col">Active</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor='let item of web2'>
+                  <th scope="row">{{item.productId}}</th>
+                  <td> 
+                    <img src="{{item.imagesweb2}}" style="width: 100px">
+                  </td>
+                  <td>{{item.productName}}</td>
+                  <td>
+                       {{item.price}}
+                  </td>
+                  <td>
+    
+               
+                      <button  (click)='Tang(item.productId)' style="font-size:24px;color: darkviolet; "><i class="fa fa-plus-square"></i></button>
+                      {{item.Quatity}}
+                      <button (click)='Giam(item.productId)'style="font-size:24px ; "> <i class="fa fa-minus-square"></i></button>
+                      
+                  </td>
+                  <td>
+                    <button _ngcontent-ntq-c1="" class="btn btn-danger" type="button" style=" margin-right: 10px;">View</button>
+                    <button type="button" class="btn btn-warning" (click)="removeTC(item.ID)">Delete</button>
+                  </td>
+                 
+                </tr>
+           <tr>
+              <th scope="row">Total Price</th>
+              <td colspan="5" style="padding-left:800px">{{Tongtien()}}</td>
+           </tr>
+              </tbody>
+            </table>
+    
+    
+    
+              
+          </div>

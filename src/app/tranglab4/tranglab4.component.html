@@ -1,0 +1,37 @@
+<div class="container">
+<div class="card">
+    <h5 class="card-header">DANH SÁCH HÀNG HÓA SẢN PHẨM</h5>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th  scope="col" (click)="sortBy('name')">SẢN PHẨM</th>
+                <th scope="col"  (click)="sortBy('price')">ĐƠN GIÁ</th>
+                <th scope="col" (click)="sortBy('discount')">GIẢM GIÁ</th>
+                <th scope="col"(click)="sortBy('date')" >NGÀY</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor='let item of list| orderBy:sort | paginate: { itemsPerPage: rowonpage, currentPage: page } ' >
+                   
+                <td>{{item.name}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.discount}}</td>
+                <td>{{item.date}}</td>
+              </tr>
+             
+            </tbody>
+          </table>
+        </div> 
+          <div class="card-footer text-center">
+                <i class='fas fa-hand-point-up' style="font-size:24px;border-right-width: 12px;padding-right: 12px" (click)="sortBy('discount' )"></i>
+                <i class="fas fa-hand-point-left" style="font-size:24px;border-right-width: 12px;padding-right: 12px" (click)="prePage()"></i>
+                <i class="fas fa-hand-point-right" style="font-size:24px;border-right-width: 12px;padding-right: 12px" (click)="nextPage()"></i>
+                <i class='fas fa-hand-point-down' style='font-size:24px'(click)="sortBy('name')"></i>
+        </div>
+    
+
+
+    </div>
+  </div>
+  

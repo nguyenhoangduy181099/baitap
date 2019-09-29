@@ -1,0 +1,117 @@
+.nav-link{
+    font-size: 13px !important;
+}
+.navbar-brand{
+    font-size: 13px !important;
+}
+.form-inline.my-2.my-lg-0{
+    font-size: 13px !important;
+}
+.fas.fa-star{
+    color: red !important;
+    margin-right: 12px;
+}
+.fas.fa-compact-disc{
+    color: aqua;
+    margin-right: 12px;
+}
+.fas.fa-atlas{
+    color: yellow;
+    margin-right: 12px;
+}
+.fab.fa-apple{
+    color: orange;
+    margin-right: 12px;
+}
+.fas.fa-balance-scale{
+    color: blueviolet;
+    margin-right: 12px;
+}
+.fas.fa-bug{
+    color: olive;
+    margin-right: 12px;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.list{
+    position: absolute;
+     left: 255px;
+     bottom: 42px;
+}
+.fas.fa-list{
+font-size: 27px;
+direction: none;
+}
+span{
+    margin-left: 15px;
+}
+.card{
+    border: 1px none;
+}
+.type-home{
+    direction: none;
+}
+.type{
+    display: flex;
+    flex-direction: row;
+}
+.table{
+     margin-top: 72px;
+}
+.btn.btn-outline-success.my-2.my-sm-0{
+    background-color:#3385ff !important;
+    color: white;
+}
+.T7{
+    border-radius: 5px;
+}
+.fas.fa-info{
+    margin-right: 20px;
+    color: green;
+}
+.fas.fa-pen{
+    margin-right: 20px;
+    color: brown;
+}
+.fas.fa-trash{
+    color:blue;
+}
+.list-group-item{
+    background-color: darkslategray !important;
+    color: white;
+}
+.logo{
+background-color: darkslategray;
+}
+.center{
+    background-color: darkslategray;
+    color: white;
+}
+.fas.fa-list{
+    color: white;
+}
+.card-img-top{
+    background-color: darkslategray
+}
+.lose{
+    font-size: 11px;
+}
+.win{
+    font-size: 11px;
+    margin-left: 900px;
+    margin-bottom: 30px;
+}
+.col-8{
+    margin-top: 50px;
+}

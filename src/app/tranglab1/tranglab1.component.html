@@ -1,0 +1,261 @@
+    <div class="card-header">
+      <ul class="nav nav-pills card-header-pills">
+          <li class="nav-item">
+              <a class="nav-link " [routerLink]="['/trangchu']">Trang chủ</a>
+            </li>
+        <li class="nav-item">
+          <a class="nav-link " [routerLink]="['/lab1']">phụ lục demo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"[routerLink]="['/lab1bai1']">bài 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " [routerLink]="['/lab1bai2']" >bài 2</a>
+        </li>
+      </ul>
+    </div>
+<div class="card" style="padding-top: 20px">
+    <div class="card-header">
+    list Product
+    </div>
+   <div class="card-body">
+      <div class="col-2" style="float: left" >
+        <p>filterd by</p>
+        <h3>filterd By</h3>
+      </div>
+      <div class="col-2" style="float: left" >
+            <form class="form-inline">
+           <div class="form-col">
+              <input type="text" class="form-control" placeholder=" ">
+            </div>
+      </form>
+      </div>
+      <table class="table">
+          <thead>
+            <tr>
+                <th scope="col"><button type="submit" class="btn btn-primary" style="border-left" >Hien image</button></th>
+              <th scope="col">Product</th>
+              <th scope="col">Code</th>
+              <th scope="col">Available</th>
+              <th scope="col">Price</th>
+              <th scope="col">5 Star Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let item of Lab1' class="alert fade show">
+             <td>
+               <img *ngIf='isShow' src="assets/imagesweb1/{{item.imageUrl}}" width="100">
+              </td>
+              <td>
+                <a [routerLink]="['/dtl01',item.productId]">{{item.productName}}</a>
+              </td>
+              <td>{{item.productCode}}</td>
+              <td>{{item.releaseDate}}</td>
+              <td>{{item.price}}</td>
+              
+              <td>
+                  <i class="fas fa-star" style="font-size:24px" aria-hidden="true"></i>
+                  <i class="fas fa-star" style="font-size:24px" aria-hidden="true"></i>
+            
+                  <i class="fas fa-star" style="font-size:24px" aria-hidden="true"></i>
+              </td>
+            </tr>
+            
+  
+          </tbody>
+        </table>
+    </div>
+  </div>
+  
+
+
+
+         
+ 
+<nav class="navbar navbar-expand-lg navbar-light bg-light"style="padding-top:30px">
+          <a class="navbar-brand" href="#"><i class="fas fa-sync-alt"></i></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"> 
+                  <i class="fas fa-fast-backward"></i> Come back home</a>
+              </li>    
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-compact-disc"></i>
+                <i class="fas fa-atlas"></i>
+                <i class="fab fa-apple"></i>
+                <i class="fas fa-balance-scale"></i>
+                <i class="fas fa-bug"></i>
+            </form>
+          </div>
+        </nav>
+        <!------>
+        <div class="all">
+        <div class="col-4" style="float: left">
+        <div class="card" style="width: 18rem;">
+        <div class="logo">
+          <img class="card-img-top" src="assets/imagesweb1/images.png" alt="Card image cap" style="width: 25%">
+          <div class="list">
+           <a href="#"> <i class="fas fa-list"></i></a>
+          </div>
+        </div>
+          <div class="center">
+            <p>Supervisor</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <a href=”#” ><li class="list-group-item"> <i class="fas fa-home"></i> <span>Home</span></li></a>
+            <a href="#"><li class="list-group-item"> <i class="fas fa-user-alt"></i> <span>Employees</span></li></a>
+            <a href="#"><li class="list-group-item"><i class="far fa-id-card"></i><span> Projects</span></li></a>
+            <a href="#"><li class="list-group-item"><i class="fab fa-adn"></i><span>Skills</span></li></a>
+            <a href="#"><li class="list-group-item"><i class="fab fa-pinterest-square"></i><span>Unterns</span></li></a>
+            <a href="#"><li class="list-group-item"><i class="fas fa-drum-steelpan"></i><span>Topics</span></li></a>
+            <a href="#"><li class="list-group-item"><i class="fas fa-archive"></i><span>Coures</span></li></a>
+           <a href="#"><li class="list-group-item"> <i class="fab fa-atlassian"></i><span>Topic_Course</span></li></a>
+           <a href="#"><li class="list-group-item"><i class="fas fa-book"></i><span>Classes</span></li></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+      <!------->
+      <div class="col-8" style="float: left">
+        <div class="type">
+        <div class="type-home"><a href=""><p>HOME</p></a></div>
+        <div class="type-profile"><p> / I Warned Myself</p></div>
+      </div>
+      <!----Menu-->
+      <nav class="navbar navbar-light bg-light">
+          <a class="navbar-brand">Show</a>
+          <a class="navbar-brand">
+              <select class="T7"style="width: 70px ; height: 30px;">
+                  <option>10</option>
+                  <option>9</option>
+                  <option>8</option>
+                  <option>7</option>
+                </select>
+          </a>
+          <a class="navbar-brand">Emtraems</a>
+          <form class="form-inline">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Exel</button>
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">PDF</button>
+            <input class="form-control mr-sm-2" type="search" placeholder="Search"  aria-label="Search" >
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">+ Add Employees</button>
+          </form>
+        </nav>
+        <!----table-->
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col"></th>
+                <th scope="col">Firstname</th>
+                <th scope="col">Lastname</th>
+                <th scope="col">Email</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td></td>
+                <td>Cong</td>
+                <td>Ngo</td>
+                <td>ntcong@tma.com.vn</td>
+                <td>
+                    <i class="fas fa-info"></i>
+                    <i class="fas fa-pen"></i>
+                    <i class="fas fa-trash"></i>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td></td>
+                <td>Thuy</td>
+                <td>Thanh</td>
+                <td>aa@gmail.com</td>
+                <td>
+                    <i class="fas fa-info"></i>
+                    <i class="fas fa-pen"></i>
+                    <i class="fas fa-trash"></i>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td></td>
+                <td>Thanh</td>
+                <td>Thuy</td>
+                <td>thanhthuy@gmail.com</td>
+                <td>
+                    <i class="fas fa-info"></i>
+                    <i class="fas fa-pen"></i>
+                    <i class="fas fa-trash" (click)="removeTC(item.ID)"></i>
+                </td>
+              </tr>
+              <tr>
+                  <th scope="row">4</th>
+                  <td></td>
+                  <td>Qui</td>
+                  <td>Tran</td>
+                  <td>quitran@tma.com.vn</td>
+                  <td>
+                      <i class="fas fa-info"></i>
+                      <i class="fas fa-pen"></i>
+                      <i class="fas fa-trash" (click)="removeTC(item.ID)"></i>
+                  </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td></td>
+                    <td>Nguyen</td>
+                    <td>tran</td>
+                    <td>ttnguyen1@tma.com.vn</td>
+                    <td>
+                        <i class="fas fa-info"></i>
+                        <i class="fas fa-pen"></i>
+                        <i class="fas fa-trash" (click)="removeTC(item.ID)"></i>
+                    </td>
+                  </tr>
+            </tbody>
+          </table>
+      </div>
+      <!----->
+      <p class="lose ">Showing 1 to 5 of 5 Employees</p>
+      <div class="win">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+    
+  
+
+
+    
+
+
+
+
+
+
+
+

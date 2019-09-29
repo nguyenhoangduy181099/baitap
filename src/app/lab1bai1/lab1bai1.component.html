@@ -1,0 +1,39 @@
+<div class="card-header">
+    <ul class="nav nav-pills card-header-pills">
+        <li class="nav-item">
+            <a class="nav-link " [routerLink]="['/trangchu']">Trang chủ</a>
+          </li>
+      <li class="nav-item">
+        <a class="nav-link " [routerLink]="['/lab1']">phụ lục demo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"[routerLink]="['/lab1bai1']">bài 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " [routerLink]="['/lab1bai2']" >bài 2</a>
+      </li>
+    </ul>
+  </div>
+      <table class="table table-bordered">
+          <thead>
+              <tr>
+              <th scope="col">Hình</th>
+              <th scope="col">Họ và Tên</th>
+              <th scope="col">Ngày Sinh</th>
+              <th scope="col">Giới Tính</th>
+              <th scope="col">Điểm</th>
+            </tr>
+          </thead>
+          <tbody>
+                  <tr *ngFor='let item of bt2'>
+                      <th scope="row">
+                          <img src="{{item.images}}" style="width: 100px">
+                      </th>
+                          <td>{{item.Name}}</td>
+                          <td>{{item.date}}</td>
+                          <td>{{item.sex}}</td>
+                          <td>{{item.point}}</td>
+            </tr>
+          </tbody>
+        </table>
+      
