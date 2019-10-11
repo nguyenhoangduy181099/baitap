@@ -1,0 +1,65 @@
+<div class="container">
+        <nav class="navbar navbar-dark bg-dark">
+                <ul class="nav nav-pills card-header-pills">
+                  <li class="nav-item">
+                    <a class="nav-link " href="#">Trang chủ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/hcn']">Hình chữ nhật</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " [routerLink]="['/tienthuong']">Tính thưởng tết nguyên Đán</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link "  [routerLink]="['/banhang']">Bán hàng giải khát</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link "  [routerLink]="['/thuongtet']">kiểm tra tính thưởng tết nguyên Đán </a>
+                    </li>
+                </ul>
+          </nav>
+        <div class="card">
+            <div class="card-header" style="background-color: maroon;color: olive;">
+                Tính Thưởng Tết Nguyên Đán
+            </div>
+            <div class="card-body" style="background-color: red;">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"><b>Họ và Tên</b></label>
+                        <input type="text" [(ngModel)]="nhanvien.hoten" [ngModelOptions]="{standalone: true}"
+                            class="form-control">
+                    </div>
+                    <label for="exampleInputEmail1"><b>Lương</b></label>
+                    <div class="input-group mb-3">
+                        <input type="text" [(ngModel)]="nhanvien.luong" [ngModelOptions]="{standalone: true}"
+                            class="form-control">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2"><b>VNĐ</b></span>
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="gender"><b>Giới tính</b></label>
+                        <p></p>
+                        <input type="radio" value="name" name="gender" [(ngModel)]="nhanvien.phai"
+                            [ngModelOptions]="{standalone: true}" />
+                        Nam
+                        <input type="radio" value="nu" name="gender" [(ngModel)]="nhanvien.phai" /> Nữ
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1"><b>Độ tuổi</b></label>
+                        <select class="custom-select" name="tuoi" [(ngModel)]="nhanvien.tuoi"
+                            [ngModelOptions]="{standalone: true}">
+                            <option value="1">Dưới 25</option>
+                            <option value="2">Từ 25 đến 40</option>
+                            <option value="3">Trên 40</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary" (click)="thuong()">Tổng Tiền</button>
+                </form>
+            </div>
+            <div class="card-footer" style="background-color:yellow;">
+                Tiền Thưởng: {{nhanvien.thuong}}VNĐ
+            </div>
+        </div>
+    </div>

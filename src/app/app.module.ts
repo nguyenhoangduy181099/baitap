@@ -4,12 +4,14 @@ import { ActivatedRoute } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import{NgxPaginationModule}  from 'ngx-pagination';
 import { OrderModule } from 'ngx-order-pipe';
+import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TrangchuchinhComponent } from './trangchuchinh/trangchuchinh.component';
 import { Tranglab1Component } from './tranglab1/tranglab1.component';
 import { Dtlab1Component } from './dtlab1/dtlab1.component';
 import { Tranglab4Component } from './tranglab4/tranglab4.component';
 import { from } from 'rxjs';
+import{HttpClientModule} from '@angular/common/http';
 import { Trangchulab5Component } from './trangchulab5/trangchulab5.component';
 import { Bai1lab5Component } from './bai1lab5/bai1lab5.component';
 import { Trangchulab2Component } from './trangchulab2/trangchulab2.component';
@@ -22,6 +24,15 @@ import { DangkyComponent } from './dangky/dangky.component';
 import { DangnhapComponent } from './dangnhap/dangnhap.component';
 import { QuenmatkhauComponent } from './quenmatkhau/quenmatkhau.component';
 import { DoimatkhauComponent } from './doimatkhau/doimatkhau.component';
+import { Lab5Component } from './lab5/lab5.component';
+import { DlStudentComponent } from './dl-student/dl-student.component';
+import { PhimComponent } from './phim/phim.component';
+import { DephimComponent } from './dephim/dephim.component';
+import { StdDetailComponent } from './std-detail/std-detail.component';
+import { HcnComponent } from './hcn/hcn.component';
+import { TihtienthndComponent } from './tihtienthnd/tihtienthnd.component';
+import { BanhangComponent } from './banhang/banhang.component';
+import { ThuongtetComponent } from './thuongtet/thuongtet.component';
 
 @NgModule({
   declarations: [
@@ -42,11 +53,24 @@ import { DoimatkhauComponent } from './doimatkhau/doimatkhau.component';
     DangnhapComponent,
     QuenmatkhauComponent,
     DoimatkhauComponent,
+    Lab5Component,
+    DlStudentComponent,
+    PhimComponent,
+    DephimComponent,
+    StdDetailComponent,
+    HcnComponent,
+    TihtienthndComponent,
+    BanhangComponent,
+    ThuongtetComponent,
+    
+  
   ],
   imports: [
     BrowserModule,
     NgxPaginationModule,
+    FormsModule,
     OrderModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: TrangchuchinhComponent },
       { path: 'trangchu', component: TrangchuchinhComponent },
@@ -57,14 +81,25 @@ import { DoimatkhauComponent } from './doimatkhau/doimatkhau.component';
      {path:'lab02',component:Trangchulab2Component},
      {path:'lab002',component:Trangchuphu2Component},
      {path:'lab0002',component:Trangchuphu3Component},
+     {path:'dllab/:ID',component:StdDetailComponent},
+     {path:'dllab2/:ID',component:StdDetailComponent},
+     {path:'dllab3/:ID',component:StdDetailComponent},
      {path:'lab4',component:Tranglab4Component},
      {path:'lab5',component:Trangchulab5Component},
+     {path:'hcn',component:HcnComponent},
+     {path:'tienthuong',component:TihtienthndComponent},
+     {path:'banhang',component:BanhangComponent},
+     {path:'thuongtet',component:ThuongtetComponent},
+     {path:'lab05',component:Lab5Component},
      {path:'bai1lab5',component:Bai1lab5Component},
      {path:'btl',component:BaitaplonComponent},
      {path:'DK',component:DangkyComponent},
      {path:'DN',component:DangnhapComponent},
      {path:'QMK',component:QuenmatkhauComponent},
-     {path:'DMK',component:DoimatkhauComponent}
+     {path:'DMK',component:DoimatkhauComponent},
+     {path:'Dl',component:DlStudentComponent},
+     {path:'phim',component:PhimComponent},
+
     ])
   ], 
   providers: [], 

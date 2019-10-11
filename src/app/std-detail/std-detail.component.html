@@ -1,0 +1,70 @@
+<div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark ">  
+       
+                <li class="breadcrumb-item"><a [routerLink]="['/lab02']">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page" style="color: chartreuse;">sinh vien</li>
+            
+            </nav>
+  
+      <div class="row bg-primary no-gutters mt-2 mb-4">
+        <div class="col-md-7">
+            <h6 class="txtshadow my-2 text-light">
+                <i class="fas fa-user-graduate ml-1"></i>
+                Student-Detail			
+            </h6>				
+        </div>		
+    </div>
+    <div class="card mb-3 mt-5 text-primary border-primary mx-md-5">
+        <div class="row no-gutters text-monospace">		
+            <div class="col-md-7">
+                <div class="card-body">	
+                    <div class="row">
+                        <p class="card-text col-md-4 col-6">FirstName:</p>
+                        <p class="font-weight-bold">{{students.FirstMidName}}</p>
+                    </div>
+                    <div class="row">
+                        <p class="card-text col-md-4 col-6">LastName:</p>
+                        <p class="font-weight-bold">{{students.LastName}}</p>
+                    </div>
+                    <div class="row">
+                        <p class="card-text col-md-4 col-6">EnrollDate:</p>
+                        <p class="font-weight-bold">{{students.EnrollmentDate}}</p>
+                        <span class="text-info ml-3">{{students.time}}</span>
+                    </div>			
+                    <div class="row">
+                        <p class="card-text col-md-4 col-6">Title:</p>
+                        <p class="font-weight-bold">{{students.Title}}</p>
+                    </div>
+                    <div class="row">
+                        <p class="card-text col-md-4 col-6">Credits:</p>
+                        <p class="font-weight-bold">{{students.Credits}}</p>
+                    </div>			
+                    <div class="row">
+                        <p class="card-text col-md-4 col-6">Grade:</p>
+                        <p class="font-weight-bold">{{students.Grade}}</p>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-hover table-bordered table-striped table-responsive-mdn">
+                <thead class="table-success">
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Grade</th>
+                        <th scope="col">Credits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let E of enroll; index as i'>
+                        <td>{{arr[i].Title}}</td>
+                        <td>{{E.Grade}}</td>
+                        <td>{{arr[i].Credits}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card-footer col-md-12">
+                <i class="fas fa-arrow-circle-left fa-lg ml-1"(click)='Back()'>&nbsp;Back</i>
+            </div>	
+        </div>
+    </div>
+  </div>
+  

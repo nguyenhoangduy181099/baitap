@@ -1,0 +1,21 @@
+<div class="container">
+        <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item"><a href="#">Library</a></li>
+                </ol>
+        </nav>
+    <div class="container">
+        <div class="row">
+              <div class="col-md-14" *ngFor="let f of listFilms ">
+                   <div class="film">
+                       <img src="  ">
+                       <a [routerLink]="['/phim',f.url]">{{f.title}}</a>
+
+                   </div>
+                   <p>Artic:{{f.director}}</p>
+                   <p>Producer:{{f.producer}}</p>
+                 </div>
+         </div>
+    </div>
+</div>

@@ -11,17 +11,20 @@ export class Trangchuphu3Component implements OnInit {
 
   ngOnInit() {
   }
-  title= Trangchuphu3Component;
-  TC=
-  [
-{"ID":7,"FirstName":"Laura","LastName":"Norman","EnrollDate":"2003-09-01"},  
-  {"ID":8,"FirstName":"Nino","LastName":"Olivetto","EnrollDate":"2005-09-01"}
-
-  ]
-
-  removeTC(ID: number){
-    const index =this.TC.findIndex(TC =>TC.ID ===ID);
-     this.TC.splice(index,1);
-     alert("ban muon xoa");
-  }
+  liststudents = [
+		{
+			"ID": 7,
+			"FirstMidName": "Laura",
+			"LastName": "Norman",
+			"EnrollmentDate": "2003-09-01",
+			"time": "12:00:00 PM"
+		},
+		{
+			"ID": 8,
+			"FirstMidName": "Nino",
+			"LastName": "Olivetto",
+			"EnrollmentDate": "2005-09-01",
+			"time": "13:00:00 PM"
+		}
+	];
 }

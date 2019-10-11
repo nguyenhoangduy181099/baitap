@@ -11,20 +11,38 @@ export class Trangchuphu2Component implements OnInit {
 
   ngOnInit() {
   }
-  title= Trangchuphu2Component;
-  TC=
-  [
-    
-    {"ID":4,"FirstName":"Gytis","LastName":"Barzdukas","EnrollDate":"2002-09-01"},   
-           {"ID":5,"FirstName":"Yan","LastName":"Li","EnrollDate":"2002-09-01"},     
-            {"ID":6,"FirstName":"Peggy","LastName":"Justice","EnrollDate":"2001-09-01"},  
+  
+	liststudents = [
+		{
+			"ID": 4,
+			"FirstMidName": "Gytis",
+			"LastName": "Barzdukas",
+			"EnrollmentDate": "2002-09-01",
+			"time": "12:00:00 PM"
+		},
+		{
+			"ID": 5,
+			"FirstMidName": "Yan",
+			"LastName": "Li",
+			"EnrollmentDate": "2002-09-01",
+			"time": "13:00:00 PM"
+		},
+		{
+			"ID": 6,
+			"FirstMidName": "Peggy",
+			"LastName": "Justice",
+			"EnrollmentDate": "2001-09-01",
+			"time": "13:00:00 PM"
+		}
+	];
 
-
-  ]
-
-  removeTC(ID: number){
-    const index =this.TC.findIndex(TC =>TC.ID ===ID);
-     this.TC.splice(index,1);
-     alert("ban muon xoa");
-  }
+	delete(id: number) {
+		var a = confirm('Are You Sure You Want To Delete ?');
+		if (a == true) {
+			const index = this.liststudents.findIndex(P => P.ID === id);
+			this.liststudents.splice(index, 1);
+		} else {
+			return false;
+		}
+	}
 }

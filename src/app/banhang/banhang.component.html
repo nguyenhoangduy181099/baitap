@@ -1,0 +1,48 @@
+<div class="container">
+        <nav class="navbar navbar-dark bg-dark">
+                <ul class="nav nav-pills card-header-pills">
+                  <li class="nav-item">
+                    <a class="nav-link " href="#">Trang chủ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/hcn']">Hình chữ nhật</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " [routerLink]="['/tienthuong']">Tính thưởng tết nguyên Đán</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link "  [routerLink]="['/banhang']">Bán hàng giải khát</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link "  [routerLink]="['/thuongtet']">kiểm tra tính thưởng tết nguyên Đán </a>
+                    </li>
+                </ul>
+          </nav>
+        <table class="table table-bordered table-dark">
+                <thead class="table-primary">
+                    <tr>
+                        <th scope="col">Tên Hàng</th>
+                        <th scope="col">Số Lượng</th>
+                        <th scope="col">Đơn Giá</th>
+                        <th scope="col">Thành Tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of listbh">
+                        <td class="form-check ml-3">
+                            <input class="form-check-input" checked type="checkbox" name="checkbox" #checkbox>
+                            <label class="form-check-label" for="invalidCheck1">{{item.name}}</label>
+                        </td>
+                        <td class="w-20">
+                            <input [(ngModel)]="item.quantity" name="sl" type="number" value="1" min="10" class="form-control">	
+                        </td>
+                        <td>{{item.price}}</td>
+                        <td style="color: mediumblue;">{{item.price*item.quantity}}</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center" colspan="3" style="color: gold;">TỔNG TIỀN</td>
+                        <td style="color:  mediumblue;">{{thanhtien()}}</td>
+                    </tr>
+                </tbody>
+            </table>
+</div>

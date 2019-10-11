@@ -1,16 +1,16 @@
-    <div class="card-header">
-      <ul class="nav nav-pills card-header-pills">
+    <div class="card-header" style="background-color: black;">
+      <ul class="nav nav-pills card-header-pills" >
           <li class="nav-item">
-              <a class="nav-link " [routerLink]="['/trangchu']">Trang chủ</a>
+              <a class="nav-link " style="color:chartreuse;" [routerLink]="['/trangchu']">Trang chủ</a>
             </li>
         <li class="nav-item">
-          <a class="nav-link " [routerLink]="['/lab1']">phụ lục demo</a>
+          <a class="nav-link " style="color:chartreuse;" [routerLink]="['/lab1']">phụ lục demo</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"[routerLink]="['/lab1bai1']">bài 1</a>
+          <a class="nav-link" style="color:chartreuse;"[routerLink]="['/lab1bai1']">bài 1</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " [routerLink]="['/lab1bai2']" >bài 2</a>
+          <a class="nav-link " style="color:chartreuse;"[routerLink]="['/lab1bai2']" >bài 2</a>
         </li>
       </ul>
     </div>
@@ -42,7 +42,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor='let item of Lab1' class="alert fade show">
+            <tr *ngFor='let item of Lab1' class="text-monospace">
              <td>
                <img *ngIf='isShow' src="assets/imagesweb1/{{item.imageUrl}}" width="100">
               </td>
@@ -52,13 +52,17 @@
               <td>{{item.productCode}}</td>
               <td>{{item.releaseDate}}</td>
               <td>{{item.price}}</td>
-              
-              <td>
-                  <i class="fas fa-star" style="font-size:24px" aria-hidden="true"></i>
-                  <i class="fas fa-star" style="font-size:24px" aria-hidden="true"></i>
-            
-                  <i class="fas fa-star" style="font-size:24px" aria-hidden="true"></i>
-              </td>
+             <td>
+              <div class="hide" [style.width.px]="item.starRating*90/5">
+                <div class="text-warning txtshadow" style="width:90px">
+                  <i class="fas fa-star"></i>						
+                  <i class="fas fa-star"></i>						
+                  <i class="fas fa-star"></i>						
+                  <i class="fas fa-star"></i>						
+                  <i class="fas fa-star"></i>						
+                </div>
+              </div>
+            </td>
             </tr>
             
   

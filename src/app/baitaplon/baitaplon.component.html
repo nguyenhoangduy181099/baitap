@@ -2,37 +2,37 @@
         <div class="text-center">
                 <img _ngcontent-yfh-c1="" alt="..." class="rounded" src="  assets/imgbtl/book1.png" style="width: 1100px;height: 300px; ">
               </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
       
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/btl']"><i class='far fa-bookmark' style='font-size:24px'></i> Trang chủ</a>
+            <a class="nav-link" [routerLink]="['/btl']" style="color: chartreuse;"><i class='far fa-bookmark' style='font-size:24px'></i> Trang chủ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class='fas fa-camera-retro' style='font-size:24px'></i> Giới thiệu</a>
+            <a class="nav-link" href="#" style="color: chartreuse"><i class='fas fa-camera-retro' style='font-size:24px'></i> Giới thiệu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class='fas fa-bullhorn' style='font-size:24px'></i> Liên hệ</a>
+            <a class="nav-link" href="#" style="color: chartreuse"><i class='fas fa-bullhorn' style='font-size:24px'></i> Liên hệ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class='far fa-credit-card' style='font-size:24px'></i> Góp ý</a>
+            <a class="nav-link" href="#" style="color: chartreuse"><i class='far fa-credit-card' style='font-size:24px'></i> Góp ý</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class='fas fa-gift' style='font-size:24px'></i> Hỏi đáp</a>
+            <a class="nav-link" href="#" style="color: chartreuse"><i class='fas fa-gift' style='font-size:24px'></i> Hỏi đáp</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 460px">
+          <li class="nav-item dropdown"  >
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 460px; color: green;">
               Tài khoản
             </a>
-            <div class="dropdown-menu dropdown-menu-right login-home ">
-                    <a class="dropdown-item" [routerLink]="['/DK']">Đăng ký</a>
-                    <a class="dropdown-item" [routerLink]="['/DN']">Đăng Nhập</a>
-                    <a class="dropdown-item"[routerLink]="['/QMK']">Quên mật khẩu</a>
+            <div class="dropdown-menu dropdown-menu-right login-home bg-primary  "  >
+                    <a class="dropdown-item" [routerLink]="['/DK']" style="color: indigo;" >Đăng ký</a>
+                    <a class="dropdown-item" [routerLink]="['/DN']" style="color: indigo;" >Đăng Nhập</a>
+                    <a class="dropdown-item"[routerLink]="['/QMK']" style="color: indigo;" >Quên mật khẩu</a>
                     
-                    <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Đăng xuất</a>
-                        <a class="dropdown-item"[routerLink]="['/DMK']">Đổi mật khẩu</a>
+                    <div class="dropdown-divider" ></div>
+                        <a class="dropdown-item" href="#" style="color:red;">Đăng xuất</a>
+                        <a class="dropdown-item"[routerLink]="['/DMK']" style="color:red ;" >Đổi mật khẩu</a>
                   </div>
           </li>
         </ul>
@@ -44,34 +44,34 @@
             <div class="row">
                 <div class="col-md-9">
             <div class="card-deck">
-                <div class="card text-center">
+                <div class="card text-center " style="background-color:teal ">
                     <img src="assets/logos/1.jpg">
                     <div class="card-footer">
-                        <small class="text-muter">Lập trình android </small>
+                        <small class="text-muter" style="color: chartreuse;">Lập trình android </small>
                     </div>
                 </div>
     
-                <div class="card text-center">
+                <div class="card text-center" style="background-color:teal">
                     <img src="assets/logos/2.jpg">
                     <div class="card-footer">
-                        <small class="text-muter">Lập trình đa nền tảng nâng cao</small>
+                        <small class="text-muter"style="color:chartreuse;">Lập trình đa nền tảng nâng cao</small>
                     </div>
                 </div>
                 
             </div>
     
             <div class="card-deck">
-                <div class="card text-center">
+                <div class="card text-center"style="background-color:teal">
                     <img src="assets/logos/3.jpg">
                     <div class="card-footer">
-                        <small class="text-muter">Lập trình thế giới Internet</small>
+                        <small class="text-muter"style="color: chartreuse;">Lập trình thế giới Internet</small>
                     </div>
                 </div>
     
-                <div class="card text-center">
+                <div class="card text-center"style="background-color:teal">
                     <img src="assets/logos/4.jpg">
                     <div class="card-footer">
-                        <small class="text-muter">thiết kế web </small>
+                        <small class="text-muter" style="color: chartreuse;">thiết kế web </small>
                     </div>
                 </div>
             </div>
@@ -80,20 +80,23 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="icon">
+                          <a class="btn" [routerLink]="['/trangchu']"  >
+                            <i style='font-size:24px' class='fas' >&#xf3e5;</i>
+                          </a>
                     <a class="btn" href="#">
-                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-facebook-f" style="color: slateblue; font-size:24px;"></i>
                     </a>
     
                     <a class="btn" href="#">
-                        <i class="fas fa-address-book"></i>
+                        <i class="fas fa-address-book" style="color: seagreen; font-size:24px;"></i>
                     </a>
     
                     <a class="btn" href="#">
-                        <i class="fas fa-arrow-alt-circle-left"></i>
+                        <i class="fas fa-arrow-alt-circle-left" style="color: yellow; font-size:24px ;"></i>
                     </a>
     
                     <a class="btn" href="#">
-                        <i class="fas fa-arrow-alt-circle-right"></i>
+                        <i class="fas fa-arrow-alt-circle-right" style="color: yellow; font-size:24px ;"></i>
                     </a>
                 </div>
                     </div>
@@ -108,7 +111,7 @@
                 
                             <div class="accordion" id="accordionExample">
                               <div class="card">
-                                <div class="card-header" id="headingOne">
+                                <div class="card-header bg-dark " id="headingOne">
                                   <h2 class="mb-0">
                                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-size:16px; font-weight:bold">
                                       <i class='fas fa-gift' style='font-size:24px'></i> Danh sách môn học lập trình
@@ -116,21 +119,21 @@
                                   </h2>
                                 </div>
                             
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                  <div class="card-body">
-                                    <ul class="list-group">
-                                        <li class="list-group-item">Lập trình Android nâng cao</li>
-                                        <li class="list-group-item">Lập trình hướng đối tượng Java</li>
-                                        <li class="list-group-item">Lập trình PHP</li>
-                                        <li class="list-group-item">Lập trình Android cơ bản</li>
-                                        <li class="list-group-item">Lập trình game 2D</li>
-                                        <li class="list-group-item">Lập trình ASP NET</li>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample" style="background-color: red" >
+                                  <div class="card-body" >
+                                    <ul class="list-group"  >
+                                        <li class="list-group-item" style="background-color: rgb(119, 0, 255);color: yellowgreen;">Lập trình Android nâng cao</li>
+                                        <li class="list-group-item" style="background-color: rgb(119, 0, 255);color: yellowgreen;">Lập trình hướng đối tượng Java</li>
+                                        <li class="list-group-item" style="background-color: rgb(119, 0, 255);color: yellowgreen;">Lập trình PHP</li>
+                                        <li class="list-group-item" style="background-color: rgb(119, 0, 255);color: yellowgreen;">Lập trình Android cơ bản</li>
+                                        <li class="list-group-item" style="background-color: rgb(119, 0, 255);color: yellowgreen;">Lập trình game 2D</li>
+                                        <li class="list-group-item" style="background-color: rgb(119, 0, 255);color: yellowgreen;">Lập trình ASP NET</li>
                                     </ul>
                                   </div>
                                 </div>
                               </div>
                               <div class="card">
-                                <div class="card-header" id="headingTwo">
+                                <div class="card-header bg-dark" id="headingTwo">
                                   <h2 class="mb-0">
                                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="font-size:16px; font-weight:bold">
                                       <i class='fas fa-gift' style='font-size:24px'></i> Danh sách các môn thiết kế
@@ -140,11 +143,11 @@
                                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                   <div class="card-body">
                                     <ul class="list-group">
-                                        <li class="list-group-item">Thiết kế giao diện điện thoại Android </li>
-                                        <li class="list-group-item">Thiết kế phần mềm dự án</li>
-                                        <li class="list-group-item">thiết kế web </li>
-                                        <li class="list-group-item">thiết kế SQL serve </li>
-                                        <li class="list-group-item">thiết kế xây dựng</li>
+                                        <li class="list-group-item" style="background-color: saddlebrown; color: springgreen;" >Thiết kế giao diện điện thoại Android </li>
+                                        <li class="list-group-item" style="background-color: saddlebrown ; color: springgreen;" >Thiết kế phần mềm dự án</li>
+                                        <li class="list-group-item" style="background-color: saddlebrown; color: springgreen;" >thiết kế web </li>
+                                        <li class="list-group-item" style="background-color: saddlebrown; color: springgreen;" >thiết kế SQL serve </li>
+                                        <li class="list-group-item" style="background-color: saddlebrown; color: springgreen;" >thiết kế xây dựng</li>
             
                                     </ul>
                                   </div>

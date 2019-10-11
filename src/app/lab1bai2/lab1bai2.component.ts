@@ -72,9 +72,5 @@ export class Lab1bai2Component implements OnInit {
         
   }
 }
-removeTC(id: number){
-  const index =this.web2.findIndex(web2 =>web2.id ===id);
-   this.web2.splice(index,1);
-   alert("ban muon xoa");
-}
+
 }

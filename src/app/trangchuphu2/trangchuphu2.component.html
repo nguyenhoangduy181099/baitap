@@ -1,68 +1,69 @@
 <div class="container">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">sinh vien</li>
-        </ol>
-      </nav>
-  
-    <div class="card" style="margin-top: 30px">
-      <div class="card-header">
-        <i class='fas fa-table' style='font-size:24px'>Danh sách sinh viên</i>
-      </div>
-      <div class="card-body">
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-        <table _ngcontent-xkb-c1="" class="table table-bordered" style=" margin-top: 16px;">
-          <thead>
-            <tr>
-              <th scope="col">LastName</th>
-              <th scope="col">FirstName</th>
-              <th scope="col">EnrollDate</th>
-              <th scope="col">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor='let item of TC' class="alert fade show">
-              <td>{{item.LastName}}</td>
-              <td>{{item.FirstName}}</td>
-              <td>{{item.EnrollDate}}</td>
-              
-  <td>
-                <i class="mt-1 mr-3 fas fa-trash-alt fa-lg close float-left text-danger" data-dismiss="alert"
-                  (click)="removeTC(item.ID)"></i>
-            
-                <i class="fas fa-info fa-lg text-success" [routerLink]="['/lab02',ID]"></i>
-  
-  
-              </td>
-            </tr>
-          </tbody>
-        </table>
-  
-        <p _ngcontent-oyl-c1="" class="font-italic" style="margin-left; display:inline">Showing 1 of 3 </p>
-        <nav aria-label="Page navigation example" style="float:right">
-          <ul class="pagination">
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-              </a></li>
-              <li class="page-item"><a class="page-link" [routerLink]="['/lab02']">1</a></li>
-              <li class="page-item"><a class="page-link" [routerLink]="['/lab002']">2</a></li>
-              <li class="page-item"><a class="page-link" [routerLink]="['/lab0002']">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
-              </li>
-          
-          
-          </ul>
-        </nav>
-      </div>
-  
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark ">  
+       
+        <li class="breadcrumb-item"><a [routerLink]="['/lab02']">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page"style="color: chartreuse;">sinh vien</li>
+    
+    </nav>
+
+  <div class="card" style="margin-top: 30px">
+    <div class="card-header">
+      <i class='fas fa-table' style='font-size:24px'>Danh sách sinh viên</i>
     </div>
+    <div class="card-body">
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <table _ngcontent-xkb-c1="" class="table table-bordered" style=" margin-top: 16px;">
+        <thead>
+          <tr>
+            <th scope="col">LastName</th>
+            <th scope="col">FirstName</th>
+            <th scope="col">EnrollDate</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody id="myTable">			
+          <tr *ngFor="let std of liststudents">
+            <td class="align-middle"><a>{{std.FirstMidName}}</a></td>
+            <td class="align-middle">{{std.LastName}}</td>
+            <td class="align-middle">{{std.EnrollmentDate}} <span class="text-info ml-3">{{std.time}}</span></td>
+            <td class="align-middle">
+              <i class="mb-2 fas fa-info fa-2x text-success mr-4" [routerLink]="['/dllab',std.ID]" [routerLink]="['/dllab02',st.cId]">
+                
+              </i>
+              <i class="fas fa-trash-alt fa-2x close text-danger float-none" (click)="delete(std.ID)"></i>
+            </td>
+          </tr>				
+      
+        </tbody>
+      </table>
+      <p _ngcontent-oyl-c1="" class="font-italic" style="margin-left; display:inline">Showing 1 of 3 </p>
+      <nav aria-label="Page navigation example" style="float:right">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a></li>
+            <li class="page-item"><a class="page-link" [routerLink]="['/lab02']">1</a></li>
+            <li class="page-item"><a class="page-link" [routerLink]="['/lab002']">2</a></li>
+            <li class="page-item"><a class="page-link" [routerLink]="['/lab0002']">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+        
+        
+        </ul>
+      </nav>
+    </div>
+
   </div>
-  
+  <div class="thoat">
+      <a [routerLink]="['/trangchu']">
+        <button style='font-size:24px;color: darkred;background-color: rgb(88, 0, 139);'>Thoát <i class='fas fa-reply'></i></button>
+      </a>
+  </div>
+</div>
