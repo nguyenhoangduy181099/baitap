@@ -4,8 +4,12 @@ import { ActivatedRoute } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import{NgxPaginationModule}  from 'ngx-pagination';
 import { OrderModule } from 'ngx-order-pipe';
-import {FormsModule} from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
+import { ServiceService } from './services/service.service';
+
+
+
 import { TrangchuchinhComponent } from './trangchuchinh/trangchuchinh.component';
 import { Tranglab1Component } from './tranglab1/tranglab1.component';
 import { Dtlab1Component } from './dtlab1/dtlab1.component';
@@ -33,6 +37,17 @@ import { HcnComponent } from './hcn/hcn.component';
 import { TihtienthndComponent } from './tihtienthnd/tihtienthnd.component';
 import { BanhangComponent } from './banhang/banhang.component';
 import { ThuongtetComponent } from './thuongtet/thuongtet.component';
+import { MuabanComponent } from './muaban/muaban.component';
+
+import { SanphamguitarComponent } from './sanphamguitar/sanphamguitar.component';
+import { SuamatkhauComponent } from './suamatkhau/suamatkhau.component';
+
+import { CapnhattaikhoanComponent } from './capnhattaikhoan/capnhattaikhoan.component';
+import { SuataikhoanComponent } from './suataikhoan/suataikhoan.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ThunghiemComponent } from './thunghiem/thunghiem.component';
+import { DanhsachmonComponent } from './danhsachmon/danhsachmon.component';
+import { ThiComponent } from './thi/thi.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +77,23 @@ import { ThuongtetComponent } from './thuongtet/thuongtet.component';
     TihtienthndComponent,
     BanhangComponent,
     ThuongtetComponent,
+    MuabanComponent,
+    
+    SanphamguitarComponent,
+    
+    SuamatkhauComponent,
+    
+    
+    
+    CapnhattaikhoanComponent,
+    
+    SuataikhoanComponent,
+    
+    ThunghiemComponent,
+    
+    DanhsachmonComponent,
+    
+    ThiComponent,
     
   
   ],
@@ -99,8 +131,16 @@ import { ThuongtetComponent } from './thuongtet/thuongtet.component';
      {path:'DMK',component:DoimatkhauComponent},
      {path:'Dl',component:DlStudentComponent},
      {path:'phim',component:PhimComponent},
-
-    ])
+    {path:'muaban',component:MuabanComponent},
+    {path:'sanpham-guitar',component:SanphamguitarComponent},
+    {path:'smk',component:SuamatkhauComponent},
+    {path:'cntk',component:CapnhattaikhoanComponent},
+    {path:'stk',component:SuamatkhauComponent},
+    {path:'tn',component:ThunghiemComponent},
+    {path:'dsm',component:DanhsachmonComponent},
+    {path:'thi',component:ThiComponent},
+]),
+    AppRoutingModule
   ], 
   providers: [], 
   bootstrap: [AppComponent]

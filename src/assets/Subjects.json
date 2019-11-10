@@ -1,0 +1,102 @@
+[
+    {
+        "Id": "ADAV",
+        "Name": "Lập trình Android nâng cao",
+        "Logo": "assets/logo/1.jpg"
+    },
+    {
+        "Id": "ADBS",
+        "Name": "Lập trình Android cơ bản",
+        "Logo": "assets/logo/2.jpg"
+    },
+    {
+        "Id": "ADTE",
+        "Name": "Kiểm thử và triển khai ứng dụng Android",
+        "Logo": "assets/logo/3.jpg"
+    },
+    {
+        "Id": "ADUI",
+        "Name": "Thiết kế giao diện trên Android",
+        "Logo": "assets/logo/4.jpg"
+    },
+    {
+        "Id": "ASNE",
+        "Name": "Lập trình ASP.NET",
+        "Logo": "assets/logo/5.png"
+    },
+    {
+        "Id": "CLCO",
+        "Name": "Điện toán đám mây",
+        "Logo": "assets/logo/6.jpg"
+    },
+    {
+        "Id": "DBAV",
+        "Name": "SQL Server",
+        "Logo": "assets/logo/7.png"
+    },
+    {
+        "Id": "DBBS",
+        "Name": "Cơ sở dữ liệu",
+        "Logo": "assets/logo/8.png"
+    },
+    {
+        "Id": "GAME",
+        "Name": "Lập trình game 2D",
+        "Logo": "assets/logo/9.png"
+    },
+    {
+        "Id": "HTCS",
+        "Name": "HTML5 và CSS3",
+        "Logo": "assets/logo/10.jpg"
+    },
+    {
+        "Id": "INMA",
+        "Name": "Internet Marketing",
+        "Logo": "assets/logo/11.jpg"
+    },
+    {
+        "Id": "JAAV",
+        "Name": "Lập trình Java nâng cao",
+        "Logo": "assets/logo/12.png"
+    },
+    {
+        "Id": "JABS",
+        "Name": "Lập trình hướng đối tượng với Java",
+        "Logo": "assets/logo/13.png"
+    },
+    {
+        "Id": "JSPR",
+        "Name": "Lập trình JavaScript",
+        "Logo": "assets/logo/14.png"
+    },
+    {
+        "Id": "LAYO",
+        "Name": "Thiết kế layout",
+        "Logo": "assets/logo/15.jpg"
+    },
+    {
+        "Id": "MOWE",
+        "Name": "Thiết kế web cho điện thoại di động",
+        "Logo": "assets/logo/16.png"
+    },
+    {
+        "Id": "PHPP",
+        "Name": "Lập trình PHP",
+        "Logo": "assets/logo/17.jpg"
+    },
+    {
+        "Id": "PMAG",
+        "Name": "Quản lý dự án với Agile",
+        "Logo": "assets/logo/18.png"
+    },
+    {
+        "Id": "VBPR",
+        "Name": "Lập trình VB.NET",
+        "Logo": "assets/logo/19.png"
+    },
+    {
+        "Id": "WEBU",
+        "Name": "Xây dựng trang web",
+        "Logo": "assets/logo/20.png"
+    }
+]

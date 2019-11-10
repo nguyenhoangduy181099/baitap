@@ -1,62 +1,104 @@
 <div class="container">
-        <div class="text-center">
-                <img _ngcontent-yfh-c1="" alt="..." class="rounded" src="  assets/imgbtl/book1.png" style="width: 1100px;height: 300px; ">
-              </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light"  >
-      
-      <div class="collapse navbar-collapse" id="navbarText" >
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/btl']"><i class='far fa-bookmark' style='font-size:24px'></i> Trang chủ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class='fas fa-camera-retro' style='font-size:24px'></i> Giới thiệu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class='fas fa-bullhorn' style='font-size:24px'></i> Liên hệ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class='far fa-credit-card' style='font-size:24px'></i> Góp ý</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class='fas fa-gift' style='font-size:24px'></i> Hỏi đáp</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 460px">
-              Tài khoản
-            </a>
-            <div class="dropdown-menu dropdown-menu-right login-home ">
-                    <a class="dropdown-item" [routerLink]="['/DK']">Đăng ký</a>
-                    <a class="dropdown-item" [routerLink]="['/DN']">Đăng Nhập</a>
-                    <a class="dropdown-item" [routerLink]="['/QMK']">Quên mật khẩu</a>
-                    <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Đăng xuất</a>
-                        <a class="dropdown-item"[routerLink]="['/DMK']">Đổi mật khẩu</a>
-                  </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div class="text-center">
+            <img _ngcontent-yfh-c1="" alt="..." class="rounded" src="  assets/imgbtl/book1.png" style="width: 1100px;height: 300px; ">
+          </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+  
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/btl']" style="color: chartreuse;"><i class='far fa-bookmark' style='font-size:24px'></i> Trang chủ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color: chartreuse"><i class='fas fa-camera-retro' style='font-size:24px'></i> Giới thiệu</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color: chartreuse"><i class='fas fa-bullhorn' style='font-size:24px'></i> Liên hệ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color: chartreuse"><i class='far fa-credit-card' style='font-size:24px'></i> Góp ý</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color: chartreuse"><i class='fas fa-gift' style='font-size:24px'></i> Hỏi đáp</a>
+      </li>
+     
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/dsm']"> <button type="button" class="badge badge-pill badge-warning">Danh sách môn</button></a>
+      </li>
+      <li class="dropdown mt-3 mt-lg-0" style="margin-left: 300px">
+          <button type="button" class="glow-on-hover btn btn-primary font-weight-bold hvr-icon-hang" data-toggle="dropdown">
+            <span class="mr-1 txtshadow" *ngFor="let log of userLogin">{{log.username}}</span>
+            <i class="fas fa-caret-down fa-lg hvr-icon text-violet"></i>
+          </button>	
+    
+          <div class="dropdown-menu my-bgmenu my-form mt-2 border-primary dropdown-menu-lg-right dropdown-menu-md-left">
+            <a class="dropdown-item my-bd" [routerLink]="['/DK']">Đăng Ký</a>
+           
+            <a class="dropdown-item my-bd" [routerLink]="['/DN']" (click)="checkIn()">Đăng Nhập</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item my-bd" [routerLink]="['/QMK']">Quên Mật Khẩu</a>
+            <a class="dropdown-item my-bd" href="http://localhost:4200/btl" *ngIf="showQuiz" (click)="logout()">Đăng Xuất</a>        
+            <a class="dropdown-item my-bd"  [routerLink]="['/DMK']">
+              Đổi Mật Khẩu
+            </a>            
+            <a class="dropdown-item my-bd" [routerLink]="['/cntk']">
+              Cập Nhật Tài Khoản
+            </a>   
+          </div>
+      </li>
+</ul>
+</div>
 
-        <div class="card-body">
-                <form>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                            <div class="col-sm-4">
-                                <input type="email" class="form-control" id="inputEmail3" placeholder="">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                            <div class="col-sm-4">
-                                <input type="password" class="form-control" id="inputPassword3" placeholder="">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-10 product" >
-                                    <button type="submit" class="btn btn-primary">đăng Nhập</button>
-                            </div>
-                        </div>
-                    </form>
-        </div>
+</nav>
+
+
+<div class="my-4">
+        <form #formUser = "ngForm" (ngSubmit)="onSubmit(formUser)" class="was-validated my-card my-form my-2" style="height: 650px;"> 
+          <h4 class="text-center py-4 text-primary text-monospace font-weight-bold">ĐĂNG NHẬP</h4>		
+             <div class="form-row">
+            <div class="col-md-1 offset-md-3 mt-2 text-md-right">	
+              <label for="validationServer01"><i class="fas fa-user fa-lg"></i></label>
+            </div>
+            <div class="form-group col-md-4">
+              <input [(ngModel)]="username" type="text" name="username" class="form-control" placeholder="Username" required pattern="^[A-Za-z0-9_\.]{4,18}$">
+            </div>	
+          </div>
+      
+          <div class="form-row">
+            <div class="col-md-1 offset-md-3 mt-2 text-md-right">
+              <label for="exampleInputPassword1"><i class="fas fa-lock fa-lg"></i></label>
+            </div>
+            <div class="form-group col-md-4" *ngIf="!Checkbox">
+              <input [(ngModel)]="password" type="password" name="password" class="form-control" placeholder="Password" pattern=".{5,20}" required>
+            </div>
+            <div class="form-group col-md-4" *ngIf="Checkbox">
+              <input [(ngModel)]="password" type="text" name="password" class="form-control" placeholder="Password" pattern=".{5,20}" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-check form-group col-md-4 offset-md-4 offset-1">
+              <input [(ngModel)]="Checkbox" id="check1" class="form-check-input" type="checkbox" name="Checkbox">
+              <label class="form-check-label" for="check1">Hiện Mật Khẩu</label>
+            </div>
+          </div>
+      
+          <div class="form-row">				
+            <div class="col-md-4 offset-md-4 offset-1">
+              <a [routerLink]="['/QMK']" class="text-primary">Quên Mật Khẩu</a>
+            </div>
+          </div>
+      
+          <hr/>
+        <div class="form-row">			
+         
+          <div class="form-group col-md-2 offset-md-5 col-6">
+              <button type="submit" (click)="checkIn1()" class="btn btn-outline-primary btn-sm btn-block" role="button">
+                  ĐĂNG NHẬP
+                </button>					
+          </div>			
+        </div>	
+      </form>	
+    </div>
+
 </div>

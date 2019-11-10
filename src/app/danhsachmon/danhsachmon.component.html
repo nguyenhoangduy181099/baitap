@@ -1,0 +1,137 @@
+<div class="container">
+        <div class="text-center">
+                <img _ngcontent-yfh-c1="" alt="..." class="rounded" src="  assets/imgbtl/book1.png" style="width: 1100px;height: 300px; ">
+              </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+      
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/btl']" style="color: chartreuse;"><i class='far fa-bookmark' style='font-size:24px'></i> Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: chartreuse"><i class='fas fa-camera-retro' style='font-size:24px'></i> Giới thiệu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: chartreuse"><i class='fas fa-bullhorn' style='font-size:24px'></i> Liên hệ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: chartreuse"><i class='far fa-credit-card' style='font-size:24px'></i> Góp ý</a>
+          </li>
+          <li class="nav-item">
+                <a class="nav-link" href="#" style="color: chartreuse"><i class='fas fa-gift' style='font-size:24px'></i> Hỏi đáp</a>
+              </li>
+          <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/dsm']"> <button type="button" class="badge badge-pill badge-warning">Danh sách môn</button></a>
+              </li>
+             
+              <li class="dropdown mt-3 mt-lg-0" style="margin-left: 300px">
+              <button type="button" class="glow-on-hover btn btn-primary font-weight-bold hvr-icon-hang" data-toggle="dropdown">
+                <span class="mr-1 txtshadow" *ngFor="let log of userLogin">{{log.username}}</span>
+                <i class="fas fa-caret-down fa-lg hvr-icon text-violet"></i>
+              </button>	
+        
+              <div class="dropdown-menu my-bgmenu my-form mt-2 border-primary dropdown-menu-lg-right dropdown-menu-md-left">
+                <a class="dropdown-item my-bd" [routerLink]="['/DK']">Đăng Ký</a>
+               
+                <a class="dropdown-item my-bd" [routerLink]="['/DN']" (click)="checkIn()">Đăng Nhập</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item my-bd" [routerLink]="['/QMK']">Quên Mật Khẩu</a>
+                <a class="dropdown-item my-bd" href="http://localhost:4200/btl" *ngIf="showQuiz" (click)="logout()">Đăng Xuất</a>        
+                <a class="dropdown-item my-bd"  [routerLink]="['/DMK']">
+                  Đổi Mật Khẩu
+                </a>            
+                <a class="dropdown-item my-bd" [routerLink]="['/cntk']">
+                  Cập Nhật Tài Khoản
+                </a>   
+              </div>
+          </li>
+    </ul>
+  </div>
+
+    </nav>
+
+
+  <div class="card-body" style="padding: 50;">
+<div class="row mb-2">
+        <div class="col-md-3 mb-4">
+   
+                <nav class="nav flex-column my-img pb-1 px-1" *ngIf="showQuiz">
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                          <div class="card-header bg-dark " id="headingOne">
+                            <h2 class="mb-0">
+                              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-size:16px; font-weight:bold">
+                                <i class='fas fa-gift' style='font-size:24px'></i> Danh sách môn học lập trình
+                              </button>
+                            </h2>
+                          </div>
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample" style="background-color: red" >
+                            
+                              <ul class="list-group"  >
+                                  <a class="list-group-item"  *ngFor="let subje of subjects" class="img-bgr hvr-icon-pulse-grow nav-link my-bd-1 glow-on-hover mb-1" [routerLink]="['/dsm',subje.Id]">
+                                    <i class="fas fa-caret-right pl-0 mr-1 text-blue hvr-icon"></i>
+                                    <span style="color: yellowgreen">{{subje.Name}}</span>
+                                  </a>
+                              </ul>
+                           
+                          </div>
+                        </div>
+                    </div>
+                  
+                </nav>    
+                <nav class="nav flex-column my-img pb-1 px-1" *ngIf="!showQuiz">
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                          <div class="card-header bg-dark " id="headingOne">
+                            <h2 class="mb-0">
+                              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-size:16px; font-weight:bold">
+                                <i class='fas fa-gift' style='font-size:24px'></i> Danh sách môn học lập trình
+                              </button>
+                            </h2>
+                          </div>
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample" style="background-color: red" >
+                            
+                              <ul class="list-group"  >
+                                  <a class="list-group-item"  *ngFor="let subje of subjects" class="img-bgr hvr-icon-pulse-grow nav-link my-bd-1 glow-on-hover mb-1" [routerLink]="['/DN']" >
+                                    <i class="fas fa-caret-right pl-0 mr-1 text-blue hvr-icon"></i>
+                                    <span style="color: yellowgreen">{{subje.Name}}</span>
+                                  </a>
+                              </ul>
+                           
+                          </div>
+                        </div>
+                    </div>
+                  
+                </nav>  
+              </div>  
+              
+  
+    <div class="col-md-7 offset-md-1">
+      <div class="row text-center mb-md-3 mb-sm-2 text-blue">
+        <div class="col-sm-6 mb-4" *ngFor="let sub of subjects|paginate:{itemsPerPage:4,currentPage:page}">
+          <div class="card img-subject"> 
+            <a [routerLink]="['/dsm',sub.Id]" class="p-1" *ngIf="showQuiz">
+              <img src="{{sub.Logo}}" class="card-img-top" alt="..."/>
+            </a>
+            <a [routerLink]="['/DN']" class="p-1" (click)="checkTT()" *ngIf="!showQuiz">
+              <img src="{{sub.Logo}}" class="card-img-top" alt="..."/>
+            </a>
+            <div [routerLink]="['/dsm',sub.Id]" class="card-body pb-0 pt-2" *ngIf="showQuiz">
+              <p class="card-title cursor">{{sub.Name}}</p>                                  
+            </div>    
+            <div [routerLink]="['/DN']" class="card-body pb-0 pt-2" (click)="checkTT()" *ngIf="!showQuiz">
+              <p class="card-title cursor">{{sub.Name}}</p>                                  
+            </div>  
+          </div>
+        </div>
+        <div class="col-md-12 mt-3">
+          <div class="pagination justify-content-end"> 
+            <pagination-controls class="my-pagination" (pageChange)="page = $event"></pagination-controls>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div> 
+</div>
+</div>

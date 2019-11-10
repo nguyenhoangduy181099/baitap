@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ServiceService } from './services/service.service';
+import { Student } from './models/student';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
+  students: Student[];
+
+  constructor(
+		private studentService: ServiceService
+	) { }
+
+	ngOnInit() {
+		this.studentService.loadLocalStorage();
+		this.studentService.updateLocalStorage();
+		this.studentService.getListUsers().subscribe(data => {
+			this.students = data;
+			localStorage.setItem("users", JSON.stringify(this.students));
+		});
+	}
 }

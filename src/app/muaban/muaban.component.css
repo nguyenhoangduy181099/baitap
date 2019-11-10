@@ -1,0 +1,27 @@
+.container{
+    padding-top: 40px;
+}
+header{
+    background-color: chartreuse;
+    border: 1px solid gray;
+    padding: 20px 30px;
+    border-radius: 10px;
+    border-bottom: 2px solid goldenrod;
+}
+.text_left{
+    padding-top: 10px;
+}
+.text-right{
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.text-right p{
+    margin-top: 10px;
+    margin-right: 20px;
+}
+h3{
+    color: goldenrod;
+}
+img{
+    padding-top: 10px;
+}
