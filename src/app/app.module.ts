@@ -10,6 +10,7 @@ import { ServiceService } from './services/service.service';
 
 
 
+
 import { TrangchuchinhComponent } from './trangchuchinh/trangchuchinh.component';
 import { Tranglab1Component } from './tranglab1/tranglab1.component';
 import { Dtlab1Component } from './dtlab1/dtlab1.component';
@@ -138,11 +139,13 @@ import { ThiComponent } from './thi/thi.component';
     {path:'stk',component:SuamatkhauComponent},
     {path:'tn',component:ThunghiemComponent},
     {path:'dsm',component:DanhsachmonComponent},
-    {path:'thi',component:ThiComponent},
+    {path:'dsm/:mId',component:ThiComponent},
 ]),
     AppRoutingModule
   ], 
-  providers: [], 
+  providers: [
+    ServiceService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

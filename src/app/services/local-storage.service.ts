@@ -23,4 +23,3 @@ export class LocalStorageService {
  		return <type>obj || null;
  	}
 }
- 
